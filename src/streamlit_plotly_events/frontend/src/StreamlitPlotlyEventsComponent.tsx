@@ -49,7 +49,10 @@ class StreamlitPlotlyEventsComponent extends StreamlitComponentBase {
     });
 
     // Return array as JSON to Streamlit
-    Streamlit.setComponentValue(JSON.stringify(clickedPoints))
+    Streamlit.setComponentValue(JSON.stringify({
+      "points":clickedPoints,
+      "lassoPoints":data.lassoPoints
+    }))
   }
 }
 

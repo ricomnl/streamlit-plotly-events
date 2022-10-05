@@ -134,7 +134,7 @@ if not _RELEASE:
         plot_name_holder2.write(f"Clicked Point: {clickedPoint2}")
 
     st.subheader("# Plotly Select Event")
-    fig3 = px.bar(x=[0, 1, 2, 3], y=[0, 1, 2, 3])
+    fig3 = px.scatter(x =[1, 2, 3],y=[1, 2, 3])
     plot_name_holder3 = st.empty()
     clickedPoint3 = plotly_events(
         fig3, key="select", click_event=False, select_event=True
